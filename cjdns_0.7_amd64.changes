@@ -1,0 +1,32 @@
+Format: 1.8
+Date: Tue, 06 May 2014 13:25:49 +0400
+Source: cjdns
+Binary: cjdns cjdns-dbg
+Architecture: source amd64
+Version: 0.7
+Distribution: unstable
+Urgency: low
+Maintainer: Sergey "Shnatsel" Davidoff <shnatsel@gmail.com>
+Changed-By: Sergey "Shnatsel" Davidoff <shnatsel@gmail.com>
+Description:
+ cjdns      - Encrypted networking for regular people
+ cjdns-dbg  - Encrypted networking for regular people (debugging symbols)
+Changes:
+ cjdns (0.7) unstable; urgency=low
+ .
+   * New upstream release.
+Checksums-Sha1:
+ 1e5889efb7576f84f7d4a1849a2c735b46052e28 729 cjdns_0.7.dsc
+ 6435930bc621df8ec208c3ee20870d507fdedc35 1944716 cjdns_0.7.tar.xz
+ f6cc5286d4518f6462d20964695e55e573cdd7ed 240876 cjdns_0.7_amd64.deb
+ 30075a156045618ed11dce0f33856b4534d60148 260390 cjdns-dbg_0.7_amd64.deb
+Checksums-Sha256:
+ 0930620ddc45d01e323f2555e4827a588ab4f8fe8a336934c4f0afc22117db4f 729 cjdns_0.7.dsc
+ 1b7ec5145249c5bcf06176bc8e16949fb964125fb1a7b3987e96a590017843f6 1944716 cjdns_0.7.tar.xz
+ 0029b37a12fcdd9efd182886e3a4f35d5292654a88b9687ec978cbadfea71961 240876 cjdns_0.7_amd64.deb
+ ed008c94e25e420be9801e753cb460dc2c08af5d4f153447fde30581a808f3bd 260390 cjdns-dbg_0.7_amd64.deb
+Files:
+ 8f2ba8ce091ed0a81e6569fdebb99394 240876 comm extra cjdns_0.7_amd64.deb
+ 8f95e882246f589414c0a422cd31c337 260390 debug extra cjdns-dbg_0.7_amd64.deb
+ a345171f951b6b7536f75a50adb547df 729 comm extra cjdns_0.7.dsc
+ 9205f0e5a5a167e46fc235718af27ee3 1944716 comm extra cjdns_0.7.tar.xz

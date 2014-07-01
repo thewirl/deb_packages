@@ -1,0 +1,898 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc
+dpkg-buildpackage: source package cjdns
+dpkg-buildpackage: source version 0.7
+dpkg-buildpackage: source distribution unstable
+dpkg-buildpackage: source changed by Sergey "Shnatsel" Davidoff <shnatsel@gmail.com>
+ dpkg-source --before-build .cjdns
+dpkg-buildpackage: host architecture amd64
+ fakeroot debian/rules clean
+make: 'clean' is up to date.
+ dpkg-source -b .cjdns
+dpkg-source: info: using source format `3.0 (native)'
+dpkg-source: info: building cjdns in cjdns_0.7.tar.xz
+dpkg-source: info: building cjdns in cjdns_0.7.dsc
+ debian/rules build
+dh build 
+   dh_testdir
+   debian/rules override_dh_auto_configure
+make[1]: Entering directory '/home/dyngar-m/.cjdns'
+debian/do-wrapper
+Initialize 11ms
+Copy dependencies
+Build NaCl
+Creating directories
+Getting system type
+Compiler supports link time optimization
+System is [amd64]
+Using premade plan at [node_build/plans/amd64_plan.json]
+Creating system specific integer type headers
+beginning build
+implementations generated
+[2;32mCompiling jsbuild/objects_internal/crypto_hashblocks_sha512_inplace_blocks.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_scalarmult_curve25519_donna_c64_base.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_scalarmult_curve25519_donna_c64_smult.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_hash_sha512_ref_hash.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_stream_salsa20_amd64_xmm6_stream.s.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_verify_16_ref_verify.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_stream_aes128ctr_core2_afternm.s.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_stream_aes128ctr_core2_beforenm.s.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_stream_aes128ctr_core2_stream.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_stream_aes128ctr_core2_xor.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_stream_aes128ctr_core2_xor_afternm.s.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_stream_salsa2012_amd64_xmm6_stream.s.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_onetimeauth_poly1305_amd64_auth.s.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_onetimeauth_poly1305_amd64_constants.s.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_onetimeauth_poly1305_amd64_verify.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_stream_xsalsa20_ref_stream.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_stream_xsalsa20_ref_xor.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_hashblocks_sha256_ref_blocks.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_core_hsalsa20_ref_core.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_core_salsa208_ref_core.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_verify_32_ref_verify.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_hash_sha256_ref_hash.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_core_salsa20_ref_core.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_auth_hmacsha256_ref_hmac.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_auth_hmacsha256_ref_verify.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_fe_0.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_fe_1.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_fe_add.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_fe_cmov.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_fe_copy.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_fe_frombytes.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_fe_invert.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_fe_isnegative.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_fe_isnonzero.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_fe_mul.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_fe_neg.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_fe_pow22523.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_fe_sq.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_fe_sq2.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_fe_sub.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_fe_tobytes.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_ge_add.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_ge_double_scalarmult.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_ge_frombytes.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_ge_madd.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_ge_msub.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_ge_p1p1_to_p2.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_ge_p1p1_to_p3.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_ge_p2_0.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_ge_p2_dbl.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_ge_p3_0.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_ge_p3_dbl.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_ge_p3_to_cached.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_ge_p3_to_p2.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_ge_p3_tobytes.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_ge_precomp_0.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_ge_scalarmult_base.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_ge_sub.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_ge_tobytes.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_keypair.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_open.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_sc_muladd.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_sc_reduce.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_sign_ed25519_ref10_sign.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_secretbox_xsalsa20poly1305_ref_box.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_auth_hmacsha512256_ref_hmac.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_auth_hmacsha512256_ref_verify.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_stream_salsa208_amd64_xmm6_stream.s.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_core_salsa2012_ref_core.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_box_curve25519xsalsa20poly1305_ref_after.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_box_curve25519xsalsa20poly1305_ref_before.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_box_curve25519xsalsa20poly1305_ref_box.c.o[0m
+[2;32mCompiling jsbuild/objects_internal/crypto_box_curve25519xsalsa20poly1305_ref_keypair.c.o[0m
+Waiting for [3] processes
+Waiting for [2] processes
+Waiting for [1] processes
+[1;31mLinking static C library jsbuild/libnacl.a[0m
+ranlib jsbuild/libnacl.a
+[2;32mCompiling Test jsbuild/tests/auth[0m
+[2;32mCompiling Test jsbuild/tests/auth2[0m
+[2;32mCompiling Test jsbuild/tests/auth3[0m
+[2;32mCompiling Test jsbuild/tests/auth5[0m
+[2;32mCompiling Test jsbuild/tests/box[0m
+[2;32mCompiling Test jsbuild/tests/box2[0m
+[2;32mCompiling Test jsbuild/tests/box7_curve25519xsalsa20poly1305[0m
+[2;32mCompiling Test jsbuild/tests/box8_curve25519xsalsa20poly1305[0m
+[2;32mCompiling Test jsbuild/tests/core1[0m
+[2;32mCompiling Test jsbuild/tests/core2[0m
+[2;32mCompiling Test jsbuild/tests/core3[0m
+[2;32mCompiling Test jsbuild/tests/core4[0m
+[2;32mCompiling Test jsbuild/tests/core5[0m
+[2;32mCompiling Test jsbuild/tests/core6[0m
+[2;32mCompiling Test jsbuild/tests/hash_sha512[0m
+[2;32mCompiling Test jsbuild/tests/hash_sha256[0m
+[2;32mCompiling Test jsbuild/tests/hash3[0m
+[2;32mCompiling Test jsbuild/tests/onetimeauth[0m
+[2;32mCompiling Test jsbuild/tests/onetimeauth2[0m
+[2;32mCompiling Test jsbuild/tests/onetimeauth7[0m
+[2;32mCompiling Test jsbuild/tests/scalarmult[0m
+[2;32mCompiling Test jsbuild/tests/scalarmult2[0m
+[2;32mCompiling Test jsbuild/tests/scalarmult5[0m
+[2;32mCompiling Test jsbuild/tests/scalarmult6[0m
+[2;32mCompiling Test jsbuild/tests/secretbox[0m
+[2;32mCompiling Test jsbuild/tests/secretbox2[0m
+[2;32mCompiling Test jsbuild/tests/secretbox7_xsalsa20poly1305[0m
+[2;32mCompiling Test jsbuild/tests/secretbox8_xsalsa20poly1305[0m
+[2;32mCompiling Test jsbuild/tests/stream[0m
+[2;32mCompiling Test jsbuild/tests/stream2[0m
+[2;32mCompiling Test jsbuild/tests/stream3[0m
+[2;32mCompiling Test jsbuild/tests/stream4[0m
+Waiting for [3] processes
+Waiting for [2] processes
+Waiting for [1] processes
+done
+testing python python
+Build Libuv
+['/home/dyngar-m/.cjdns/build_linux/dependencies/libuv/uv.gyp', '-I', '/home/dyngar-m/.cjdns/build_linux/dependencies/libuv/common.gypi', '--depth=.', '-f', 'make', '-Goutput_dir=/home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out', '--generator-output', '/home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out', '-Dgcc_version=49', '-Dclang=0', '-Dhost_arch=x64', '-Dtarget_arch=x64', '-Dlibrary=static_library', '-Dcomponent=static_library']
+make[2]: Entering directory '/home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out'
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/fs-poll.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/inet.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/uv-common.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/version.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/unix/async.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/unix/core.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/unix/dl.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/unix/fs.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/unix/getaddrinfo.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/unix/loop.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/unix/loop-watcher.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/unix/pipe.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/unix/poll.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/unix/process.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/unix/signal.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/unix/stream.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/unix/tcp.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/unix/thread.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/unix/threadpool.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/unix/timer.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/unix/tty.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/unix/udp.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/unix/proctitle.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/unix/linux-core.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/unix/linux-inotify.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv/src/unix/linux-syscalls.o
+  TOUCH /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/uv_dtrace_header.stamp
+  TOUCH /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/uv_dtrace_provider.stamp
+  AR(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/libuv.a
+  COPY /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/libuv.a
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-benchmarks/test/benchmark-async-pummel.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-benchmarks/test/benchmark-async.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-benchmarks/test/benchmark-fs-stat.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-benchmarks/test/benchmark-getaddrinfo.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-benchmarks/test/benchmark-loop-count.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-benchmarks/test/benchmark-million-async.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-benchmarks/test/benchmark-million-timers.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-benchmarks/test/benchmark-multi-accept.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-benchmarks/test/benchmark-ping-pongs.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-benchmarks/test/benchmark-pound.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-benchmarks/test/benchmark-pump.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-benchmarks/test/benchmark-sizes.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-benchmarks/test/benchmark-spawn.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-benchmarks/test/benchmark-thread.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-benchmarks/test/benchmark-tcp-write-batch.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-benchmarks/test/benchmark-udp-pummel.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-benchmarks/test/dns-server.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-benchmarks/test/echo-server.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-benchmarks/test/blackhole-server.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-benchmarks/test/run-benchmarks.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-benchmarks/test/runner.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-benchmarks/test/runner-unix.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/blackhole-server.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/echo-server.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/run-tests.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/runner.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-get-loadavg.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-active.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-async.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-async-null-cb.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-callback-stack.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-callback-order.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-close-fd.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-close-order.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-connection-fail.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-cwd-and-chdir.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-delayed-accept.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-error.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-embed.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-emfile.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-fail-always.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-fs.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-fs-event.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-get-currentexe.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-get-memory.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-getaddrinfo.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-getsockname.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-hrtime.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-idle.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-ipc.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-ipc-send-recv.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-loop-handles.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-loop-alive.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-loop-stop.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-loop-time.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-walk-handles.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-watcher-cross-stop.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-multiple-listen.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-osx-select.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-pass-always.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-ping-pong.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-pipe-bind-error.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-pipe-connect-error.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-pipe-server-close.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-platform-output.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-poll.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-poll-close.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-process-title.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-ref.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-run-nowait.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-run-once.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-semaphore.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-shutdown-close.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-shutdown-eof.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-signal.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-signal-multiple-loops.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-spawn.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-fs-poll.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-stdio-over-pipes.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-tcp-bind-error.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-tcp-bind6-error.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-tcp-close.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-tcp-close-accept.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-tcp-close-while-connecting.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-tcp-connect-error-after-write.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-tcp-shutdown-after-write.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-tcp-flags.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-tcp-connect-error.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-tcp-connect-timeout.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-tcp-connect6-error.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-tcp-open.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-tcp-write-to-half-open-connection.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-tcp-writealot.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-tcp-try-write.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-tcp-unexpected-read.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-tcp-read-stop.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-threadpool.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-threadpool-cancel.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-mutexes.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-thread.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-barrier.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-condvar.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-timer-again.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-timer-from-check.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-timer.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-tty.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-udp-dgram-too-big.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-udp-ipv6.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-udp-open.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-udp-options.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-udp-send-and-recv.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-udp-multicast-join.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-dlerror.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-udp-multicast-ttl.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-ip4-addr.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/test-ip6-addr.o
+  CC(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/obj.target/run-tests/test/runner-unix.o
+  LINK(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/run-benchmarks
+  LINK(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/run-tests
+  LINK(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/run-benchmarks: Finished
+  LINK(target) /home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out/Release/run-tests: Finished
+make[2]: Leaving directory '/home/dyngar-m/.cjdns/build_linux/dependencies/libuv/out'
+Configure 75116ms
+Scan for out of date files 0ms
+[2;32mBuilding C object contrib/c/publictoip6.c complete[0m
+[2;32mBuilding C object admin/angel/cjdroute2.c complete[0m
+[2;32mBuilding C object test/testcjdroute.c complete[0m
+[2;32mBuilding C object contrib/c/privatetopublic.c complete[0m
+[2;32mBuilding C object contrib/c/makekeys.c complete[0m
+[2;32mBuilding C object crypto/random/randombytes.c complete[0m
+[2;32mBuilding C object contrib/c/sybilsim.c complete[0m
+Searching for SECCOMP
+[2;32mBuilding C object util/Hex.c complete[0m
+[2;32mBuilding C object crypto/Key.c complete[0m
+[2;32mBuilding C object util/platform/Sockaddr.c complete[0m
+[2;32mBuilding C object benc/String.c complete[0m
+[2;32mBuilding C object util/CString.c complete[0m
+[2;32mBuilding C object util/Assert.c complete[0m
+[2;32mBuilding C object util/version/Version.c complete[0m
+[2;32mBuilding C object memory/Allocator.c complete[0m
+[2;32mBuilding C object util/log/WriterLog.c complete[0m
+[2;32mBuilding C object util/events/libuv/Process.c complete[0m
+[2;32mBuilding C object util/SysInfo.c complete[0m
+[2;32mBuilding C object util/events/libuv/Pipe.c complete[0m
+[2;32mBuilding C object util/ArchInfo.c complete[0m
+[2;32mBuilding C object net/SwitchPinger_admin.c complete[0m
+[2;32mBuilding C object memory/MallocAllocator.c complete[0m
+[2;32mBuilding C object benc/serialization/standard/StandardBencSerializer.c complete[0m
+[2;32mBuilding C object benc/serialization/json/JsonBencSerializer.c complete[0m
+[2;32mBuilding C object io/FileWriter.c complete[0m
+[2;32mBuilding C object io/FileReader.c complete[0m
+[2;32mBuilding C object io/ArrayWriter.c complete[0m
+[2;32mBuilding C object io/ArrayReader.c complete[0m
+[2;32mBuilding C object interface/UDPInterface_admin.c complete[0m
+[2;32mBuilding C object interface/InterfaceController.c complete[0m
+[2;32mBuilding C object net/SwitchPinger.c complete[0m
+[2;32mBuilding C object dht/SerializationModule.c complete[0m
+[2;32mBuilding C object dht/dhtcore/RouterModule_admin.c complete[0m
+[2;32mBuilding C object dht/ReplyModule.c complete[0m
+[2;32mBuilding C object crypto/AddressCalc.c complete[0m
+[1;31mLinking C executable ./publictoip6[0m
+[2;32mBuilding C object crypto/CryptoAuth_benchmark.c complete[0m
+[2;32mBuilding C object admin/AuthorizedPasswords.c complete[0m
+[2;32mBuilding C object admin/Configurator.c complete[0m
+[2;32mBuilding C object admin/angel/Core.c complete[0m
+[2;32mBuilding C object crypto/CryptoAuth.c complete[0m
+[2;32mBuilding C object net/Ducttape.c complete[0m
+[2;32mBuilding C object tunnel/IpTunnel.c complete[0m
+[2;32mBuilding C object admin/angel/Hermes.c complete[0m
+[2;32mBuilding C object switch/SwitchCore.c complete[0m
+[2;32mBuilding C object dht/dhtcore/SearchRunner.c complete[0m
+[2;32mBuilding C object dht/dhtcore/RouterModule.c complete[0m
+[2;32mBuilding C object dht/dhtcore/RumorMill.c complete[0m
+[2;32mBuilding C object dht/dhtcore/Node.c complete[0m
+[2;32mBuilding C object switch/EncodingScheme.c complete[0m
+[2;32mBuilding C object benc/List.c complete[0m
+[2;32mBuilding C object dht/dhtcore/NodeStore.c complete[0m
+[2;32mBuilding C object dht/Address.c complete[0m
+[1;31mLinking C executable ./privatetopublic[0m
+[2;32mBuilding C object crypto/random/Random.c complete[0m
+[2;32mBuilding C object crypto/random/seed/RandomSeed.c complete[0m
+[2;32mBuilding C object dht/DHTModuleRegistry.c complete[0m
+[2;32mBuilding C object admin/angel/InterfaceWaiter.c complete[0m
+[2;32mBuilding C object admin/angel/AngelInit.c complete[0m
+[2;32mBuilding C object admin/AdminClient.c complete[0m
+[2;32mBuilding C object util/log/Log.c complete[0m
+[2;32mBuilding C object admin/Admin.c complete[0m
+[2;32mBuilding C object exception/Except.c complete[0m
+[2;32mBuilding C object util/events/libuv/EventBase.c complete[0m
+[2;32mBuilding C object ./interface/tuntap/windows/test/TAPInterface_root_test.c complete[0m
+[2;32mBuilding C object benc/Dict.c complete[0m
+[2;32mBuilding C object ./interface/tuntap/windows/test/TAPDevice_root_test.c complete[0m
+[2;32mBuilding C object ./benc/serialization/standard/test/benc_serializeString_test.c complete[0m
+[2;32mBuilding C object ./benc/serialization/standard/test/benc_serializeList_test.c complete[0m
+[2;32mBuilding C object ./benc/serialization/standard/test/benc_serializeInteger_test.c complete[0m
+[2;32mBuilding C object ./util/platform/test/Sockaddr_test.c complete[0m
+[2;32mBuilding C object ./dht/dhtcore/test/VersionList_test.c complete[0m
+[2;32mBuilding C object ./util/test/UniqueName_test.c complete[0m
+[2;32mBuilding C object ./crypto/random/test/Random_test.c complete[0m
+[2;32mBuilding C object ./util/test/Seccomp_test.c complete[0m
+[2;32mBuilding C object ./util/test/Process_test.c complete[0m
+[2;32mBuilding C object ./util/test/Identity_test.c complete[0m
+[2;32mBuilding C object ./util/test/Map_test.c complete[0m
+[2;32mBuilding C object ./util/test/Hex_test.c complete[0m
+[2;32mBuilding C object ./util/test/Endian_test.c complete[0m
+[2;32mBuilding C object ./util/test/Bits_test.c complete[0m
+[2;32mBuilding C object ./util/test/Checksum_test.c complete[0m
+[2;32mBuilding C object ./util/test/Base32_test.c complete[0m
+[2;32mBuilding C object ./util/test/AverageRoller_test.c complete[0m
+[2;32mBuilding C object ./util/test/ArchInfo_test.c complete[0m
+[2;32mBuilding C object ./util/test/AddrTools_test.c complete[0m
+[2;32mBuilding C object ./switch/test/NumberCompress_test.c complete[0m
+[2;32mBuilding C object ./tunnel/test/IpTunnel_test.c complete[0m
+[2;32mBuilding C object ./switch/test/LabelSplicer_test.c complete[0m
+[2;32mBuilding C object ./memory/test/Allocator_test.c complete[0m
+[2;32mBuilding C object ./switch/test/EncodingScheme_test.c complete[0m
+[2;32mBuilding C object ./io/test/FileReader_test.c complete[0m
+[2;32mBuilding C object ./interface/test/UDPInterface_test.c complete[0m
+[2;32mBuilding C object ./interface/test/UDPInterface_communication_test.c complete[0m
+[2;32mBuilding C object ./interface/test/TUNInterface_ipv6_root_test.c complete[0m
+[2;32mBuilding C object ./interface/test/TUNInterface_ipv4_root_test.c complete[0m
+[2;32mBuilding C object ./interface/test/MultiInterface_test.c complete[0m
+[2;32mBuilding C object ./interface/test/InterfaceController_multiIface_test.c complete[0m
+[2;32mBuilding C object ./interface/test/InterfaceController_test.c complete[0m
+[2;32mBuilding C object ./interface/test/ICMP6Generator_test.c complete[0m
+[2;32mBuilding C object ./interface/test/FramingInterface_test.c complete[0m
+[2;32mBuilding C object ./dht/test/DHTModules_handleOutgoing_test.c complete[0m
+[2;32mBuilding C object ./dht/test/DHTModules_handleIncoming_test.c complete[0m
+[2;32mBuilding C object ./crypto/test/ReplayProtector_test.c complete[0m
+[2;32mBuilding C object ./crypto/test/CryptoAuth_unit_test.c complete[0m
+[2;32mBuilding C object ./crypto/test/CryptoAuth_test.c complete[0m
+[2;32mBuilding C object ./admin/test/Admin_test.c complete[0m
+[2;32mBuilding C object ./crypto/test/CryptoAuth_async_test.c complete[0m
+[2;32mBuilding C object ./test/cjdroute_routerPing_test.c complete[0m
+[2;32mBuilding C object ./test/cjdroute_injection_test.c complete[0m
+[2;32mBuilding C object ./test/CryptoAddress_test.c complete[0m
+[2;32mBuilding C object util/events/libuv/Time.c complete[0m
+[2;32mBuilding C object util/events/libuv/Timeout.c complete[0m
+[2;32mBuilding C object util/log/FileWriterLog.c complete[0m
+[2;32mBuilding C object crypto/random/libuv/LibuvEntropyProvider.c complete[0m
+[2;32mBuilding C object util/Security.c complete[0m
+[2;32mBuilding C object util/Seccomp.c complete[0m
+[2;32mBuilding C object interface/UDPInterface.c complete[0m
+[2;32mBuilding C object util/Pinger.c complete[0m
+[2;32mBuilding C object dht/dhtcore/ReplySerializer.c complete[0m
+[2;32mBuilding C object util/events/libuv/Event.c complete[0m
+[2;32mBuilding C object interface/SessionManager_admin.c complete[0m
+[2;32mBuilding C object util/Security_admin.c complete[0m
+[2;32mBuilding C object util/platform/netdev/NetDev.c complete[0m
+[2;32mBuilding C object interface/SessionManager.c complete[0m
+[2;32mBuilding C object util/log/IndirectLog.c complete[0m
+[2;32mBuilding C object memory/Allocator_admin.c complete[0m
+[2;32mBuilding C object tunnel/IpTunnel_admin.c complete[0m
+[2;32mBuilding C object interface/addressable/PacketHeaderToUDPAddrInterface.c complete[0m
+[2;32mBuilding C object interface/RainflyClient_admin.c complete[0m
+[2;32mBuilding C object interface/DNSServer.c complete[0m
+[2;32mBuilding C object interface/ICMP6Generator.c complete[0m
+[2;32mBuilding C object interface/RainflyClient.c complete[0m
+[2;32mBuilding C object interface/FramingInterface.c complete[0m
+[2;32mBuilding C object interface/InterfaceController_admin.c complete[0m
+[2;32mBuilding C object interface/InterfaceConnector.c complete[0m
+[2;32mBuilding C object interface/tuntap/TUNInterface_linux.c complete[0m
+[2;32mBuilding C object interface/ETHInterface_admin.c complete[0m
+[2;32mBuilding C object util/events/libuv/UDPAddrInterface.c complete[0m
+[2;32mBuilding C object dht/dhtcore/Janitor.c complete[0m
+[2;32mBuilding C object dht/dhtcore/NodeStore_admin.c complete[0m
+[2;32mBuilding C object dht/dhtcore/SearchRunner_admin.c complete[0m
+[2;32mBuilding C object dht/EncodingSchemeModule.c complete[0m
+[2;32mBuilding C object admin/angel/Angel.c complete[0m
+[2;32mBuilding C object admin/AdminLog.c complete[0m
+[2;32mBuilding C object dht/dhtcore/SearchStore.c complete[0m
+[2;32mBuilding C object util/AverageRoller.c complete[0m
+[2;32mBuilding C object dht/dhtcore/VersionList.c complete[0m
+[2;32mBuilding C object crypto/random/seed/SystemRandomSeed.c complete[0m
+[2;32mBuilding C object benc/serialization/cloner/Cloner.c complete[0m
+[2;32mBuilding C object crypto/random/test/DeterminentRandomSeed.c complete[0m
+[2;32mBuilding C object util/Order.c complete[0m
+[2;32mBuilding C object admin/testframework/AdminTestFramework.c complete[0m
+[2;32mBuilding C object util/platform/Socket.c complete[0m
+[2;32mBuilding C object interface/MultiInterface.c complete[0m
+[2;32mBuilding C object test/TestFramework.c complete[0m
+[2;32mBuilding C object memory/BufferAllocator.c complete[0m
+[2;32mBuilding C object util/platform/netdev/NetPlatform_linux.c complete[0m
+[2;32mBuilding C object interface/addressable/AddrInterfaceAdapter.c complete[0m
+[2;32mBuilding C object crypto/random/seed/ProcSysKernelRandomUuidRandomSeed.c complete[0m
+[2;32mBuilding C object interface/ETHInterface_linux.c complete[0m
+[2;32mBuilding C object crypto/random/seed/LinuxRandomUuidSysctlRandomSeed.c complete[0m
+[2;32mBuilding C object crypto/random/seed/DevUrandomRandomSeed.c complete[0m
+[1;31mLinking C executable ./makekeys[0m
+[1;31mLinking C executable ./randombytes[0m
+[1;31mLinking C executable build_linux/testcjdroute[0m
+[1;31mLinking C executable build_linux/cjdroute[0m
+[1;31mLinking C executable ./sybilsim[0m
+Compile 43889ms
+Running test CryptoAddress_test                                                    1.178 ms
+Running test cjdroute_injection_test                                               3.585 ms
+Running test cjdroute_routerPing_test                                              0.52 ms
+Running test Admin_test                                                            6.130 ms
+Running test CryptoAuth_async_test                                                 10.10 ms
+Running test CryptoAuth_test                                                       131.473 ms
+Running test CryptoAuth_unit_test                                                  14.962 ms
+Running test ReplayProtector_test                                                  0.797 ms
+Running test DHTModules_handleIncoming_test                                        0.35 ms
+Running test DHTModules_handleOutgoing_test                                        0.27 ms
+Running test FramingInterface_test                                                 0.66 ms
+Running test ICMP6Generator_test                                                   1.84 ms
+Running test InterfaceController_multiIface_test                                   3.246 ms
+Running test InterfaceController_test                                              14.488 ms
+Running test MultiInterface_test                                                   1.407 ms
+Running test TUNInterface_ipv4_root_test                                           0.32 ms
+Running test TUNInterface_ipv6_root_test                                           0.29 ms
+Running test UDPInterface_communication_test                                       0.574 ms
+Running test UDPInterface_test                                                     7.935 ms
+Running test FileReader_test                                                       0.960 ms
+Running test Allocator_test                                                        0.406 ms
+Running test EncodingScheme_test                                                   443.341 ms
+Running test LabelSplicer_test                                                     0.70 ms
+Running test NumberCompress_test                                                   23.801 ms
+Running test IpTunnel_test                                                         0.740 ms
+Running test AddrTools_test                                                        0.29 ms
+Running test ArchInfo_test                                                         0.55 ms
+Running test AverageRoller_test                                                    0.42 ms
+Running test Base32_test                                                           0.249 ms
+Running test Bits_test                                                             0.222 ms
+Running test Checksum_test                                                         0.37 ms
+Running test Endian_test                                                           0.28 ms
+Running test Hex_test                                                              0.199 ms
+Running test Identity_test                                                         0.26 ms
+Running test Map_test                                                              120.399 ms
+Running test Process_test                                                          5.688 ms
+Running test Seccomp_test                                                          4.25 ms
+Running test UniqueName_test                                                       0.31 ms
+Running test Random_test                                                           13.916 ms
+Running test VersionList_test                                                      0.419 ms
+Running test Sockaddr_test                                                         1.539 ms
+Running test benc_serializeInteger_test                                            0.39 ms
+Running test benc_serializeList_test                                               0.33 ms
+Running test benc_serializeString_test                                             0.63 ms
+Running test TAPDevice_root_test                                                   0.24 ms
+Running test TAPInterface_root_test                                                0.5 ms
+Total test time 813.520 ms
+
+Checking codestyle
+Checking contrib/c/publictoip6.c
+Checking crypto/Key.h
+Checking benc/String.h
+Checking benc/Object.h
+Checking memory/Allocator.h
+Checking util/Identity.h
+Checking util/Assert.h
+Checking util/Gcc.h
+Checking util/Linker.h
+Checking util/CompileTimeRandom.h
+Checking util/CString.h
+Checking util/AddrTools.h
+Checking util/Bits.h
+Checking util/Endian.h
+Checking util/Hex.h
+Checking util/platform/Sockaddr.h
+Checking admin/angel/cjdroute2.c
+Checking admin/Admin.h
+Checking benc/Dict.h
+Checking exception/Except.h
+Checking interface/addressable/AddrInterface.h
+Checking interface/Interface.h
+Checking wire/Message.h
+Checking util/UniqueName.h
+Checking util/log/Log.h
+Checking util/events/EventBase.h
+Checking admin/AdminClient.h
+Checking admin/angel/InterfaceWaiter.h
+Checking admin/angel/AngelInit.h
+Checking admin/angel/Core.h
+Checking net/Ducttape.h
+Checking dht/DHTModuleRegistry.h
+Checking dht/DHTMessage.h
+Checking io/Reader.h
+Checking io/Writer.h
+Checking dht/dhtcore/RouterModule.h
+Checking crypto/random/Random.h
+Checking crypto/random/seed/RandomSeed.h
+Checking dht/Address.h
+Checking dht/dhtcore/Node.h
+Checking switch/EncodingScheme.h
+Checking benc/List.h
+Checking dht/dhtcore/NodeStore.h
+Checking dht/dhtcore/RumorMill.h
+Checking dht/dhtcore/SearchRunner.h
+Checking switch/SwitchCore.h
+Checking tunnel/IpTunnel.h
+Checking admin/angel/Hermes.h
+Checking wire/Headers.h
+Checking admin/AuthorizedPasswords.h
+Checking crypto/CryptoAuth.h
+Checking admin/Configurator.h
+Checking benc/Int.h
+Checking crypto/AddressCalc.h
+Checking crypto/CryptoAuth_benchmark.h
+Checking dht/ReplyModule.h
+Checking dht/SerializationModule.h
+Checking dht/dhtcore/RouterModule_admin.h
+Checking interface/UDPInterface_admin.h
+Checking interface/InterfaceController.h
+Checking net/SwitchPinger.h
+Checking io/ArrayReader.h
+Checking io/ArrayWriter.h
+Checking io/FileReader.h
+Checking io/FileWriter.h
+Checking benc/serialization/BencSerializer.h
+Checking benc/serialization/json/JsonBencSerializer.h
+Checking benc/serialization/standard/StandardBencSerializer.h
+Checking memory/MallocAllocator.h
+Checking net/SwitchPinger_admin.h
+Checking util/ArchInfo.h
+Checking util/SysInfo.h
+Checking util/events/Pipe.h
+Checking util/events/Process.h
+Checking util/Base32.h
+Checking util/Security.h
+Checking util/log/WriterLog.h
+Checking util/version/Version.h
+Checking test/testcjdroute.c
+Checking util/events/Time.h
+Checking contrib/c/privatetopublic.c
+Checking contrib/c/makekeys.c
+Checking crypto/random/randombytes.c
+Checking contrib/c/sybilsim.c
+Checking util/log/FileWriterLog.h
+Checking crypto/random/libuv/LibuvEntropyProvider.h
+Checking util/events/Timeout.h
+Checking util/log/Log_impl.h
+Checking util/Hex.c
+Checking crypto/Key.c
+Checking util/platform/Sockaddr.c
+Checking util/events/libuv/UvWrapper.h
+Checking benc/String.c
+Checking util/CString.c
+Checking util/Assert.c
+Checking util/version/Version.c
+Checking memory/Allocator.c
+Checking memory/Allocator_pvt.h
+Checking util/log/WriterLog.c
+Checking util/events/libuv/Process.c
+Checking util/events/libuv/EventBase_pvt.h
+Checking util/SysInfo.c
+Checking util/Seccomp.h
+Checking util/events/libuv/Pipe.c
+Checking wire/Error.h
+Checking util/ArchInfo.c
+Checking net/SwitchPinger_admin.c
+Checking memory/MallocAllocator.c
+Checking benc/serialization/standard/StandardBencSerializer.c
+Checking benc/serialization/json/JsonBencSerializer.c
+Checking io/FileWriter.c
+Checking io/FileReader.c
+Checking io/ArrayWriter.c
+Checking io/ArrayReader.c
+Checking interface/UDPInterface_admin.c
+Checking exception/Jmp.h
+Checking interface/UDPInterface.h
+Checking interface/InterfaceController.c
+Checking crypto/CryptoAuth_pvt.h
+Checking crypto/ReplayProtector.h
+Checking util/Map.h
+Checking net/SwitchPinger.c
+Checking util/Checksum.h
+Checking util/Pinger.h
+Checking wire/Control.h
+Checking dht/SerializationModule.c
+Checking dht/DHTModule.h
+Checking dht/dhtcore/RouterModule_admin.c
+Checking dht/dhtcore/ReplySerializer.h
+Checking dht/CJDHTConstants.h
+Checking dht/ReplyModule.c
+Checking crypto/AddressCalc.c
+Checking crypto/CryptoAuth_benchmark.c
+Checking admin/AuthorizedPasswords.c
+Checking admin/Configurator.c
+Checking util/events/Event.h
+Checking admin/angel/Core.c
+Checking admin/AdminLog.h
+Checking admin/angel/Angel.h
+Checking dht/EncodingSchemeModule.h
+Checking dht/dhtcore/SearchRunner_admin.h
+Checking dht/dhtcore/NodeStore_admin.h
+Checking dht/dhtcore/Janitor.h
+Checking interface/addressable/UDPAddrInterface.h
+Checking interface/ETHInterface_admin.h
+Checking interface/tuntap/TUNInterface.h
+Checking interface/InterfaceConnector.h
+Checking interface/InterfaceController_admin.h
+Checking interface/FramingInterface.h
+Checking interface/ICMP6Generator.h
+Checking interface/RainflyClient.h
+Checking interface/RainflyClient_admin.h
+Checking interface/DNSServer.h
+Checking interface/addressable/PacketHeaderToUDPAddrInterface.h
+Checking memory/Allocator_admin.h
+Checking tunnel/IpTunnel_admin.h
+Checking util/log/IndirectLog.h
+Checking util/platform/netdev/NetDev.h
+Checking util/Security_admin.h
+Checking interface/SessionManager_admin.h
+Checking interface/SessionManager.h
+Checking crypto/CryptoAuth.c
+Checking net/Ducttape.c
+Checking interface/tuntap/TUNMessageType.h
+Checking net/Ducttape_pvt.h
+Checking switch/LabelSplicer.h
+Checking switch/NumberCompress.h
+Checking wire/Ethernet.h
+Checking tunnel/IpTunnel.c
+Checking admin/angel/Hermes.c
+Checking switch/SwitchCore.c
+Checking dht/dhtcore/SearchRunner.c
+Checking dht/dhtcore/SearchStore.h
+Checking dht/dhtcore/NodeList.h
+Checking dht/dhtcore/RouterModule.c
+Checking dht/dhtcore/RouterModule_pvt.h
+Checking dht/dhtcore/VersionList.h
+Checking util/AverageRoller.h
+Checking dht/dhtcore/RumorMill.c
+Checking dht/dhtcore/Node.c
+Checking switch/EncodingScheme.c
+Checking benc/List.c
+Checking dht/dhtcore/NodeStore.c
+Checking dht/Address.c
+Checking crypto/random/Random.c
+Checking crypto/random/seed/SystemRandomSeed.h
+Checking crypto/random/seed/RandomSeed.c
+Checking dht/DHTModuleRegistry.c
+Checking admin/angel/InterfaceWaiter.c
+Checking admin/angel/AngelInit.c
+Checking admin/AdminClient.c
+Checking benc/serialization/cloner/Cloner.h
+Checking util/log/Log.c
+Checking admin/Admin.c
+Checking exception/Except.c
+Checking util/events/libuv/EventBase.c
+Checking ./interface/tuntap/windows/test/TAPInterface_root_test.c
+Checking benc/Dict.c
+Checking ./interface/tuntap/windows/test/TAPDevice_root_test.c
+Checking ./benc/serialization/standard/test/benc_serializeString_test.c
+Checking ./benc/serialization/standard/test/benc_serializeList_test.c
+Checking ./benc/serialization/standard/test/benc_serializeInteger_test.c
+Checking ./util/platform/test/Sockaddr_test.c
+Checking ./dht/dhtcore/test/VersionList_test.c
+Checking ./util/test/UniqueName_test.c
+Checking util/test/UniqueName_test.h
+Checking ./crypto/random/test/Random_test.c
+Checking crypto/random/test/DeterminentRandomSeed.h
+Checking ./util/test/Seccomp_test.c
+Checking ./util/test/Process_test.c
+Checking ./util/test/Identity_test.c
+Checking ./util/test/Map_test.c
+Checking ./util/test/Hex_test.c
+Checking ./util/test/Endian_test.c
+Checking ./util/test/Bits_test.c
+Checking ./util/test/Checksum_test.c
+Checking ./util/test/Base32_test.c
+Checking ./util/test/AverageRoller_test.c
+Checking util/AverageRoller_pvt.h
+Checking ./util/test/ArchInfo_test.c
+Checking ./util/test/AddrTools_test.c
+Checking ./switch/test/NumberCompress_test.c
+Checking ./tunnel/test/IpTunnel_test.c
+Checking ./switch/test/LabelSplicer_test.c
+Checking ./memory/test/Allocator_test.c
+Checking ./switch/test/EncodingScheme_test.c
+Checking util/Order.h
+Checking ./io/test/FileReader_test.c
+Checking ./interface/test/UDPInterface_test.c
+Checking admin/testframework/AdminTestFramework.h
+Checking ./interface/test/UDPInterface_communication_test.c
+Checking interface/UDPInterface_pvt.h
+Checking interface/MultiInterface.h
+Checking util/platform/Socket.h
+Checking ./interface/test/TUNInterface_ipv6_root_test.c
+Checking test/RootTest.h
+Checking ./interface/test/TUNInterface_ipv4_root_test.c
+Checking ./interface/test/MultiInterface_test.c
+Checking ./interface/test/InterfaceController_multiIface_test.c
+Checking test/TestFramework.h
+Checking ./interface/test/InterfaceController_test.c
+Checking ./interface/test/ICMP6Generator_test.c
+Checking interface/ICMP6Generator_pvt.h
+Checking ./interface/test/FramingInterface_test.c
+Checking ./dht/test/DHTModules_handleOutgoing_test.c
+Checking ./dht/test/DHTModules_handleIncoming_test.c
+Checking ./crypto/test/ReplayProtector_test.c
+Checking ./crypto/test/CryptoAuth_unit_test.c
+Checking ./crypto/test/CryptoAuth_test.c
+Checking ./admin/test/Admin_test.c
+Checking ./crypto/test/CryptoAuth_async_test.c
+Checking ./test/cjdroute_routerPing_test.c
+Checking ./test/cjdroute_injection_test.c
+Checking ./test/CryptoAddress_test.c
+Checking util/events/libuv/Time.c
+Checking util/events/libuv/Timeout.c
+Checking util/log/FileWriterLog.c
+Checking crypto/random/libuv/LibuvEntropyProvider.c
+Checking util/Security.c
+Checking util/Seccomp.c
+Checking interface/UDPInterface.c
+Checking util/Pinger.c
+Checking dht/dhtcore/ReplySerializer.c
+Checking util/events/libuv/Event.c
+Checking interface/SessionManager_admin.c
+Checking util/Security_admin.c
+Checking util/platform/netdev/NetDev.c
+Checking memory/BufferAllocator.h
+Checking util/platform/netdev/NetPlatform.h
+Checking interface/SessionManager.c
+Checking util/log/IndirectLog.c
+Checking memory/Allocator_admin.c
+Checking tunnel/IpTunnel_admin.c
+Checking interface/addressable/PacketHeaderToUDPAddrInterface.c
+Checking interface/RainflyClient_admin.c
+Checking interface/DNSServer.c
+Checking interface/ICMP6Generator.c
+Checking interface/RainflyClient.c
+Checking interface/FramingInterface.c
+Checking interface/InterfaceWrapper.h
+Checking interface/InterfaceController_admin.c
+Checking interface/InterfaceConnector.c
+Checking interface/tuntap/TUNInterface_linux.c
+Checking interface/ETHInterface_admin.c
+Checking interface/ETHInterface.h
+Checking util/events/libuv/UDPAddrInterface.c
+Checking dht/dhtcore/Janitor.c
+Checking dht/dhtcore/NodeStore_admin.c
+Checking dht/dhtcore/SearchRunner_admin.c
+Checking dht/EncodingSchemeModule.c
+Checking admin/angel/Angel.c
+Checking interface/addressable/AddrInterfaceAdapter.h
+Checking admin/AdminLog.c
+Checking dht/dhtcore/SearchStore.c
+Checking util/AverageRoller.c
+Checking dht/dhtcore/VersionList.c
+Checking crypto/random/seed/SystemRandomSeed.c
+Checking crypto/random/seed/RandomSeedProvider.h
+Checking crypto/random/seed/RtlGenRandomSeed.h
+Checking crypto/random/seed/BsdKernArndSysctlRandomSeed.h
+Checking crypto/random/seed/DevUrandomRandomSeed.h
+Checking crypto/random/seed/LinuxRandomUuidSysctlRandomSeed.h
+Checking crypto/random/seed/ProcSysKernelRandomUuidRandomSeed.h
+Checking benc/serialization/cloner/Cloner.c
+Checking crypto/random/test/DeterminentRandomSeed.c
+Checking util/Order.c
+Checking admin/testframework/AdminTestFramework.c
+Checking util/platform/Socket.c
+Checking interface/MultiInterface.c
+Checking test/TestFramework.c
+Checking memory/BufferAllocator.c
+Checking util/platform/netdev/NetPlatform_linux.c
+Checking interface/addressable/AddrInterfaceAdapter.c
+Checking crypto/random/seed/ProcSysKernelRandomUuidRandomSeed.c
+Checking interface/ETHInterface_linux.c
+Checking crypto/random/seed/LinuxRandomUuidSysctlRandomSeed.c
+Checking crypto/random/seed/DevUrandomRandomSeed.c
+Test 2143ms
+[1;32mBuild completed successfully, type ./cjdroute to begin setup.[0m
+Pack 2ms
+Get mtimes 33ms
+Save State 40ms
+Total build time: 121000ms.
+make[1]: Leaving directory '/home/dyngar-m/.cjdns'
+   dh_auto_build
+   dh_auto_test
+ fakeroot debian/rules binary
+dh binary 
+   dh_testroot
+   dh_prep
+   debian/rules override_dh_auto_install
+make[1]: Entering directory '/home/dyngar-m/.cjdns'
+dh_auto_install --destdir=debian/cjdns
+make[1]: Leaving directory '/home/dyngar-m/.cjdns'
+   debian/rules override_dh_install
+make[1]: Entering directory '/home/dyngar-m/.cjdns'
+dh_install --fail-missing
+Can't stat debian/tmp: No such file or directory
+ at /usr/bin/dh_install line 245.
+make[1]: Leaving directory '/home/dyngar-m/.cjdns'
+   dh_installdocs
+   dh_installchangelogs
+   dh_pysupport
+dh_pysupport: This program is deprecated, you should use dh_python2 instead. Migration guide: http://deb.li/dhs2p
+   dh_installinit
+   dh_perl
+   dh_link
+   dh_compress
+   dh_fixperms
+   debian/rules override_dh_strip
+make[1]: Entering directory '/home/dyngar-m/.cjdns'
+dh_strip --dbg-package=cjdns-dbg
+make[1]: Leaving directory '/home/dyngar-m/.cjdns'
+   dh_makeshlibs
+   dh_shlibdeps
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package `cjdns' in `../cjdns_0.7_amd64.deb'.
+dpkg-deb: building package `cjdns-dbg' in `../cjdns-dbg_0.7_amd64.deb'.
+ dpkg-genchanges  >../cjdns_0.7_amd64.changes
+dpkg-genchanges: including full source code in upload
+ dpkg-source --after-build .cjdns
+dpkg-buildpackage: full upload; Debian-native package (full source is included)
+Now running lintian...
+E: cjdns source: source-is-missing contrib/nodejs/admin/www/js/jquery-2.0.2.min.js
+W: cjdns source: ancient-standards-version 3.9.2 (current is 3.9.5)
+W: cjdns: init.d-script-not-marked-as-conffile etc/init.d/cjdns
+E: cjdns: init.d-script-not-included-in-package etc/init.d/cjdns
+W: cjdns: binary-without-manpage usr/bin/cjdroute
+Finished running lintian.
+Now signing changes and any dsc files...
+ signfile cjdns_0.7.dsc Sergey "Shnatsel" Davidoff <shnatsel@gmail.com>
+gpg: skipped "Sergey "Shnatsel" Davidoff <shnatsel@gmail.com>": secret key not available
+gpg: /tmp/debsign.fcEhbvQi/cjdns_0.7.dsc: clearsign failed: secret key not available
+debsign: gpg error occurred!  Aborting....
